@@ -1,6 +1,7 @@
 """paper-nest: paper-thin static sites.
 
     python -m paper_nest build [src] [out]
+    python -m paper_nest watch [src] [out]
 """
 import os
 import sys
@@ -18,6 +19,9 @@ def main(argv):
     elif cmd == "build":
         from .build import build
         print(f"built {build(*args[:2])} pages")
+    elif cmd == "watch":
+        from .watch import watch
+        watch(*args[:2])
     else:
         print(f"unknown command: {cmd}", file=sys.stderr)
         return 2
