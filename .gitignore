@@ -1,3 +1,6 @@
 out/
 __pycache__/
 *.pyc
+
+# sealed drafts: never in git
+.nest/
