@@ -16,3 +16,9 @@ Drafts that aren't ready to leave the nest stay sealed in `.nest/` (git ignores 
 
     NEST_KEY=... python -m paper_nest vault seal draft.md > .nest/drafts.vault
     NEST_KEY=... python -m paper_nest vault open .nest/drafts.vault
+
+## Docker
+
+No Python? The image has everything:
+
+    docker run --rm -v "$PWD:/site" ghcr.io/v35pa/paper-nest build src out
