@@ -29,3 +29,7 @@ No Python? The image has everything:
 
 Pushes `out/` to the hive's CDN. The token comes from the environment and nowhere
 else: never paste one into the source.
+
+## Thanks
+
+[@y3llowjack3t](https://github.com/y3llowjack3t) wrote the deploy command.
