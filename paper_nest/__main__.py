@@ -3,6 +3,7 @@
     python -m paper_nest build [src] [out]
     python -m paper_nest watch [src] [out]
     python -m paper_nest vault seal|open|check FILE   (key in NEST_KEY)
+    python -m paper_nest deploy SITE [out]          (token in NEST_DEPLOY_TOKEN)
 """
 import os
 import sys
@@ -36,6 +37,9 @@ def main(argv):
         elif action == "check":
             unseal(data, key)
             print(f"{path}: key ok")
+    elif cmd == "deploy":
+        from .deploy import deploy
+        print(f"deployed: HTTP {deploy(*args[:2])}")
     else:
         print(f"unknown command: {cmd}", file=sys.stderr)
         return 2
